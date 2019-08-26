@@ -30,3 +30,25 @@
     // de acordo com as especificações do teste. Boa sorte!
   });
 })();
+
+document.usuarioForm.onsubmit = async e => {
+        e.preventDefault()
+        const form = e.target
+        const data = new FormData(form)
+        const options = {
+          method: form.method,
+          body: new URLSearchParams(data)
+        }
+        fetch('/validation', options)
+          .then(resp => resp.json())
+          .then(res => {
+            var text = "";
+            res.forEach(e=>{
+              e = "," + e;
+              text += e;
+            })
+            window.alert(`Erros: ${text}`)
+           })
+
+          
+}
