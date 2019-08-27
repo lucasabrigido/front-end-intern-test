@@ -15,19 +15,16 @@ app.post('/validation',(req,res,next)=>{
     var indice = 0;
 
     if (username == null || username == undefined || username.length <=3) {
-    	console.log(username)
     	err[indice++] = "username incorrect pattern"
     }
     if (email == null || email == undefined || email.length <=3) {
-    	console.log(email)
     	err[indice++] = "email incorrect pattern"
     }
     if (message == null || message == undefined || message.length <=3) {
-    	console.log(message)
     	err[indice++] = "message incorrect pattern"
     }
+    indice == 0 ? res.send(true) : res.send(err)
     
-    res.send(err)
     if (!err.length) next() //possivel proximo passo para enviar para o banco ou afins
 })
 

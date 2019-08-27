@@ -1,3 +1,4 @@
+/**
 // Adicionamos nosso código dentro de uma função anônima para evitar
 // variáveis globais.
 (function() {
@@ -30,25 +31,25 @@
     // de acordo com as especificações do teste. Boa sorte!
   });
 })();
+**/
 
-document.usuarioForm.onsubmit = async e => {
-        e.preventDefault()
-        const form = e.target
-        const data = new FormData(form)
-        const options = {
-          method: form.method,
-          body: new URLSearchParams(data)
-        }
-        fetch('/validation', options)
-          .then(resp => resp.json())
-          .then(res => {
-            var text = "";
-            res.forEach(e=>{
-              e = "," + e;
-              text += e;
-            })
-            window.alert(`Erros: ${text}`)
-           })
+window.onload = function (){
+    function addElement(){
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
 
-          
+        const nameValue = nameInput.value;
+        const messageValue = messageInput.value;
+
+        const side = document.getElementById('mySidenav')
+        const ul = document.createElement("ul");
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        ul.innerHTML = `<span class="color: red;" >${nameValue}</span>`
+        li.innerHTML = `<span class="color: gray;" >${messageValue}</span>`
+        ul.append(li)
+        side.append(ul)
+
+    }
 }
