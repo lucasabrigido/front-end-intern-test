@@ -34,22 +34,68 @@
 **/
 
 window.onload = function (){
-    function addElement(){
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
-
-        const nameValue = nameInput.value;
-        const messageValue = messageInput.value;
-
-        const side = document.getElementById('mySidenav')
-        const ul = document.createElement("ul");
-        const li1 = document.createElement("li");
-        const li2 = document.createElement("li");
-        ul.innerHTML = `<span class="color: red;" >${nameValue}</span>`
-        li.innerHTML = `<span class="color: gray;" >${messageValue}</span>`
-        ul.append(li)
-        side.append(ul)
-
+document.userForm.onsubmit = async e => {
+    
+    var callForm = function(){
+        var form;
+        try{
+            e.preventDefault()
+            form = e.target
+        }catch(err){
+            form = e
+        }finally { 
+            return form 
+        } 
     }
+    const form = callForm()
+    const data = new FormData(form)
+    const options = {
+        method: form.method,
+        body: new URLSearchParams(data)
+        }
+    fetch('/validation', options)
+        .then(resp => resp.json())
+        .then(res => {
+            if (res == true){
+                window.alert("Dados enviados com sucesso, acesse a barra lateral, para acompanhar seu pedido, clicando no botão 'Pedidos' a sua esquerda!")
+                addElement()
+            }
+            else{
+                var text = "";
+                res.forEach(e=>{
+                    e = ", " + e;
+                    text += e;
+                })
+                window.alert(`Mistakes${text}`)
+            }
+        })         
+}
+
+function addElement(){
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const nameValue = nameInput.value;
+    const messageValue = messageInput.value;
+
+    const side = document.getElementById('mySidenav')
+    const ul = document.createElement("ul");
+    const li = document.createElement("li");
+    //const li2 = document.createElement("li");
+    ul.innerHTML = `<span style="font-weight: bold; color: #fff; font-size:30px;" >${nameValue}</span>`
+    li.innerHTML = `<span style="color: black; font-size: 20px;" >${messageValue}</span><button style="color: red; background-color: #498356; border: none;float: right;" onclick="deleteElement(event)" >X</button>`
+    ul.append(li)
+    side.append(ul)
+}
+
+document.getElementById('message').addEventListener('keydown', function (event) {
+    if (event.keyCode === 13){
+        event.preventDefault()
+        this.form.onsubmit(this.form)
+        return false;
+    }
+})
+
+
 }

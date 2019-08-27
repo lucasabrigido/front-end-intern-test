@@ -14,10 +14,10 @@ app.post('/validation',(req,res,next)=>{
     var err = new Array()
     var indice = 0;
 
-    if (username == null || username == undefined || username.length <=3) {
+    if (username == null || username == undefined || username.length <=3 || isNaN(username)===false) {
     	err[indice++] = "username incorrect pattern"
     }
-    if (email == null || email == undefined || email.length <=3) {
+    if (email == null || email == undefined || email.length <=3 || !email.includes('@')) {
     	err[indice++] = "email incorrect pattern"
     }
     if (message == null || message == undefined || message.length <=3) {
