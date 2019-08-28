@@ -1,0 +1,25 @@
+{
+  "name": "front-end-intern-test",
+  "version": "1.0.0",
+  "description": "![IMG-1](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot1.png)\r ![IMG-2](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot2.png)\r ![IMG-3](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot3.png)\r ![IMG-4](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot4.png)\r ![IMG-5](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot5.png)",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penseadvance/front-end-intern-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penseadvance/front-end-intern-test/issues"
+  },
+  "homepage": "https://github.com/penseadvance/front-end-intern-test#readme"
+}
