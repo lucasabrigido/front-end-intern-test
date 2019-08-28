@@ -18,6 +18,7 @@ app.post('/validation',(req,res,next)=>{
     	err[indice++] = "username incorrect pattern"
     }
     if (email == null || email == undefined || email.length <=3 || !email.includes('@')) {
+        //não vou colocar email.includes('.com') pois existem emails que não colocam .com como exemplo '.edu.br'
     	err[indice++] = "email incorrect pattern"
     }
     if (message == null || message == undefined || message.length <=3) {

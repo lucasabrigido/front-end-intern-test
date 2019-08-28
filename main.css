@@ -49,7 +49,7 @@ input, textarea {
 	height: 100%;
 	display: block;
 }
-.content{
+.container{
   padding: 0;
   position: relative;
   text-align: center;
@@ -76,15 +76,27 @@ input, textarea {
 	position: fixed;
 	top: 15%;
 	left: 5%;
+  color: #ffffff;
+  background-color: #4d79ff;
+  border: solid 2px #1a53ff;
+}
+.nav span {
+  background-color: #fff;
+  color: black;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+  font-size: 1.1em;
 }
 
 .sidenav {
-  height: 100%;
+  min-height: 50%;
+  max-height: 72%;
   width: 0;
   position: fixed;
   z-index: 10;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 20px;
   background-color: #498356;
   overflow-x: hidden;
   transition: 0.5s;
@@ -93,7 +105,7 @@ input, textarea {
 
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
+  top: 0%;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
@@ -111,4 +123,16 @@ input, textarea {
 
 .sidenav a:hover {
   color: #b9b0c2;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    margin-left: 2px;
+    width: 10px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
 }

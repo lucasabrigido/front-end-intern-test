@@ -53,12 +53,14 @@ document.userForm.onsubmit = async e => {
         method: form.method,
         body: new URLSearchParams(data)
         }
+    //resolvi fazer a validação no backend a críterio de organização mesmo.
     fetch('/validation', options)
         .then(resp => resp.json())
         .then(res => {
             if (res == true){
                 window.alert("Dados enviados com sucesso, acesse a barra lateral, para acompanhar seu pedido, clicando no botão 'Pedidos' a sua esquerda!")
                 addElement()
+                document.getElementById('number').innerText = ++numberRequest
             }
             else{
                 var text = "";
