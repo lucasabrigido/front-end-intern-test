@@ -1,9 +1,9 @@
 ##Conclusão Imagens:
-<img src="./screenshot/screenshot1.png">
-<img src="./screenshot/screenshot2.png">
-<img src="./screenshot/screenshot3.png">
-<img src="./screenshot/screenshot4.png">
-<img src="./screenshot/screenshot5.png">
+![IMG-1](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot1.png)
+![IMG-2](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot2.png)
+![IMG-3](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot3.png)
+![IMG-4](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot4.png)
+![IMG-5](https://github.com/lucasabrigido/front-end-intern-test/blob/master/screenshots/screenshot5.png)
 
 
 
